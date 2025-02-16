@@ -1,73 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Printable Resume - Mira M. Hamdan</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="index-print.css" media="print">
-</head>
-<body>
-    <header>
-        <h1>Mira M. Hamdan</h1>
-        <p class="job-title">Computer Engineer</p>
-        <p>056 783 2065 | <a href="mailto:mira.m.hamdan@gmail.com">mira.m.hamdan@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/mira-hamdan-110890223" target="_blank">linkedin.com/in/mira-hamdan-110890223</a></p>
-        <p>For more details, visit my <a href="https://your-username.github.io/repository-name/" target="_blank">online CV</a>.</p>
-    </header>
+/* Styles specific for printing */
+@media print {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        color: #333;
+    }
 
-    <section class="education">
-        <h2>Education</h2>
-        <p><strong>American University of Sharjah (AUS)</strong> – Present</p>
-        <ul>
-            <li>Computer Engineering Major</li>
-            <li>Joined in Fall 2021</li>
-            <li>Expected to Graduate in Fall 2025</li>
-            <li>Cumulative GPA: 3.49</li>
-            <li>Dean’s List for Spring 2022, 2023, 2024</li>
-        </ul>
-        <p><strong>Miami University in Ohio, USA</strong> – Fall 2023</p>
-        <p>Completed an exchange semester for Junior I</p>
-    </section>
+    header, footer {
+        text-align: center;
+    }
 
-    <section class="experience">
-        <h2>Professional Experience</h2>
-        <h3>Beta IT Computer Engineer Intern (May 2024 - Jul 2024)</h3>
-        <ul>
-            <li>Enhanced expertise in network security for IT, IoT, and OT environments.</li>
-            <li>Explored Software-Defined Networks (SDN) and open switch technologies.</li>
-            <li>Advanced knowledge in cloud computing and server virtualization using hypervisors.</li>
-            <li>Conducted research and practical simulations for security analysis.</li>
-        </ul>
-    </section>
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+    }
 
-    <section class="university-experience">
-        <h2>University Work Experience</h2>
-        <h3>IEEE Sight Chapter Executive Assistant at AUS (Jun 2024 - Present)</h3>
-        <p>Support team operations and streamline club programs for educational initiatives on IEEE technologies.</p>
-        <h3>IEEE Sight Chapter Student Officer Coordinator at AUS (Jan 2024 - Jun 2024)</h3>
-        <ul>
-            <li>Taught programming to orphans using Arduino microcontrollers.</li>
-            <li>Created social media content to highlight impactful activities.</li>
-        </ul>
-    </section>
+    h2 {
+        font-size: 2rem;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
 
-    <section class="skills">
-        <h2>Technical Skills & Experience</h2>
-        <ul>
-            <li>Object-Oriented Programming (OOP) in C++</li>
-            <li>Data Structures and Algorithms</li>
-            <li>Computer Networking Projects on Cisco</li>
-        </ul>
-    </section>
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
 
-    <section class="languages">
-        <h2>Languages</h2>
-        <p>Fluent in English and Arabic</p>
-    </section>
+    ul li {
+        margin-bottom: 5px;
+    }
 
-    <footer>
-        <p>© 2025 Mira M. Hamdan</p>
-    </footer>
-</body>
-</html>
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        margin-top: 20px;
+    }
+
+    /* Remove links for printing */
+    a {
+        text-decoration: none;
+    }
+
+    /* Remove unnecessary styles for print */
+    .job-title {
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    /* Adjust page margins */
+    body {
+        margin: 20mm;
+    }
+}
