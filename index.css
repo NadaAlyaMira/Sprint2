@@ -28,7 +28,7 @@ body {
 @media print {
     body {
         font-family: Arial, sans-serif;
-        margin: 0;
+        margin: 10mm;
         padding: 0;
         background-color: #fff;
         color: #333;
@@ -68,24 +68,21 @@ body {
         margin-top: 20px;
     }
 
-    /* Remove links for printing */
-    a {
-        text-decoration: none;
+    /* Hide Print Button */
+    .print-button {
+        display: none;
     }
 
-    /* Remove unnecessary styles for print */
-    .job-title {
-        font-size: 1.2rem;
-        color: #333;
+    /* Show URLs in Print */
+    a::after {
+        content: " (" attr(href) ") ";
+        font-size: 0.9rem;
     }
 
-    section {
-        margin-bottom: 20px;
-    }
-
-    /* Adjust page margins */
-    body {
-        margin: 20mm;
+    /* Prevent Sections from Splitting Across Pages */
+    .section {
+        page-break-inside: avoid;
     }
 }
+
 
