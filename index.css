@@ -1,4 +1,30 @@
-/* Styles specific for printing */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.section {
+    background: #e7e7e7;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+/* Print Styles */
 @media print {
     body {
         font-family: Arial, sans-serif;
@@ -62,3 +88,4 @@
         margin: 20mm;
     }
 }
+
